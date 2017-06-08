@@ -29,10 +29,10 @@ class Portfolio extends Component {
           </div>
         </div>        
         <div className="Status">Tous les items</div>
-        <div className="App-content">
-          {corpora}
+          <div className="App-content">
+            {corpora}
+          </div>
         </div>
-      </div>
     );
   }
 
