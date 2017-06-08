@@ -3,12 +3,38 @@
   flex-direction: column;
 }
 
-.App h1 {
-  background-color: rgb(153, 40,0);
-  color: ivory;
-  background-image: url(porphyry.gif);
+.Nav {
+  background-color: #EEE;
+  color: black;
   background-repeat: no-repeat;
   background-position: right; 
+}
+
+.Title {
+  float: left;
+  height: 60px;
+  padding: 30px 0px 30px 5%;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  text-align: left;
+  width: 65%;
+}
+
+.Title a {
+  color: black;
+  text-decoration: none;
+}
+
+.Title a:hover {
+  text-decoration: underline;
+}
+
+.Nav img{
+  float: left;
+  height: 80px;  
+  padding: 20px 0px 20px 10%;
+  text-align: right;
+  width: 20%;
 }
 
 .Status {

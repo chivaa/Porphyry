@@ -17,16 +17,19 @@ class Portfolio extends Component {
   }
 
   render() {
-    const viewpoints = this._getViewpoints();
     const corpora = this._getCorpora();
     return (
       <div className="App">
-        <h1>{conf.user}</h1>
+        <div className="Nav">
+          <div className="Title">
+            <h1><a href="/" >Accueil</a></h1>
+          </div>
+          <div className="Image">
+            <img src="./user_icone.png" alt="icone utilisateur"/>
+          </div>
+        </div>        
         <div className="Status">Tous les items</div>
         <div className="App-content">
-          <div className="Description">
-            {viewpoints}
-          </div>
           {corpora}
         </div>
       </div>
