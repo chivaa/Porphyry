@@ -14,14 +14,62 @@ class Corpora extends Component {
 
   render() {
     let items = this._getItems();
-    return(
-      <div className="Subject">
-        <h3>{this.props.ids.join(' + ')} ({this.state.items.length})</h3>
-        <div className="Items">
-          {items}
+    var page = 1;
+    var i = (page-1)*10;
+      return(
+        <div className="Subject">
+          {/* Bases sur lesquelles on récup les info et le nombre d'éléments récupérés
+           <h3>{this.props.ids.join(' + ')} ({this.state.items.length})</h3> 
+           */}
+          <div className="Items">          
+            {
+              items[i]
+            }
+          </div><div className="Items">          
+            {
+              items[i+1]
+            }
+          </div>
+          <div className="Items">          
+            {
+              items[i+2]
+            }
+          </div>
+           <div className="Items">          
+            {
+              items[i+3]
+            }
+          </div><div className="Items">          
+            {
+              items[i+4]
+            }
+          </div>
+          <div className="Items">          
+            {
+              items[i+5]
+            }
+          </div>
+           <div className="Items">          
+            {
+              items[i+6]
+            }
+          </div><div className="Items">          
+            {
+              items[i+7]
+            }
+          </div>
+          <div className="Items">          
+            {
+              items[i+8]
+            }
+          </div>
+          <div className="Items">          
+            {
+              items[i+9]
+            }
+          </div>
         </div>
-      </div>
-    );
+      );    
   }
 
   componentDidMount() {
@@ -73,11 +121,11 @@ class Corpora extends Component {
 function Item(props) {
   let uri = '/item/' + props.id;
   return (
-    <div className="Item">
+    <div className="Item">      
       <Link to={uri}>
         <img src={props.thumbnail} alt={props.name} />
-      </Link>
-      <div>{props.name}</div>
+      </Link>     
+      <div className="Info">{props.name}</div>
     </div>
   );
 }

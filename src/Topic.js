@@ -4,6 +4,7 @@ import by from 'sort-by';
 class Topic extends Component {
   render() {
     let subtopics = this._getSubtopics();
+    return 0;
   }
 
   _getSubtopics() {

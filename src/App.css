@@ -58,7 +58,7 @@
 .Subject {
   flex-direction: column;
   flex-grow: 2;
-  background-color: dimgrey;
+  background-color: ghostwhite;
   color: rgb(240,240,240);
   padding: 4px;
   margin: 2px;
@@ -92,14 +92,23 @@
 }
 
 .Items {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  //border: dashed black;
+  //display: flex;
+  //flex-direction: row;
+  //flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .Item {
-  margin: 5px;
   color: black;
+  margin: 5px; 
+  width: 100%;
+}
+
+.Info {
+  
 }
 
 .Attributes {
