@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Hypertopic from 'hypertopic';
 import groupBy from 'json-groupby';
 import conf from './config.json';
+import Header from './Header';
 
 import './App.css';
 
@@ -18,14 +19,7 @@ class Item extends Component {
     let viewpoints = this._getViewpoints();
     return (
       <div className="App">
-      <div className="Nav">
-          <div className="Title">
-            <h1><a href="/" >Accueil</a></h1>
-          </div>
-          <div className="Image">
-            <img src="../../user_icone.png" alt="icone utilisateur"/>
-          </div>
-        </div> 
+      <Header/>
         <h1>{this.state.name}</h1>
         <div className="App-content">
           <div className="Description">

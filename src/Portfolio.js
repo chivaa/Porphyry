@@ -4,6 +4,7 @@ import Hypertopic from 'hypertopic';
 import conf from './config.json';
 import Viewpoint from './Viewpoint';
 import Corpora from './Corpora';
+import Header from './Header.js';
 
 import './App.css';
 
@@ -20,14 +21,7 @@ class Portfolio extends Component {
     const corpora = this._getCorpora();
     return (
       <div className="App">
-        <div className="Nav">
-          <div className="Title">
-            <h1><a href="/" >Accueil</a></h1>
-          </div>
-          <div className="Image">
-            <img src="./user_icone.png" alt="icone utilisateur"/>
-          </div>
-        </div>        
+        <Header/>
         <div ></div>
           <div className="App-content">
             {corpora}
@@ -48,7 +42,7 @@ class Portfolio extends Component {
   }
 
   _getViewpoints() {
-    return this.state.viewpoint.sort(by('name')).map(v => 
+    return this.state.viewpoint.sort(by('name')).map(v =>
       <Viewpoint key={v.id} id={v.id} name={v.name} />
     );
   }
