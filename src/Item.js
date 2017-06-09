@@ -27,7 +27,6 @@ class Item extends Component {
           </div>
         </div> 
         <h1>{this.state.name}</h1>
-        <div className="Status">Item</div>
         <div className="App-content">
           <div className="Description">
             <div className="DescriptionModality">

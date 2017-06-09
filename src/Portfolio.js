@@ -28,7 +28,7 @@ class Portfolio extends Component {
             <img src="./user_icone.png" alt="icone utilisateur"/>
           </div>
         </div>        
-        <div className="Status">Tous les items</div>
+        <div ></div>
           <div className="App-content">
             {corpora}
           </div>
