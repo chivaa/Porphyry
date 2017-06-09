@@ -23,9 +23,11 @@ class Corpora extends Component {
            */}
           <div className="Items">          
             {
-              items[i]
+              items
             }
-          </div><div className="Items">          
+            {/*
+              <!--
+          <div className="Items">          
             {
               items[i+1]
             }
@@ -68,6 +70,10 @@ class Corpora extends Component {
               items[i+9]
             }
           </div>
+             -->
+             */}          
+          </div>
+
         </div>
       );    
   }
@@ -125,7 +131,14 @@ function Item(props) {
       <Link to={uri}>
         <img src={props.thumbnail} alt={props.name} />
       </Link>     
-      <div className="Info">{props.name}</div>
+      <div className="Info">
+        <ul>
+          <li className="Name">{props.name}</li>
+          <li>France, Aube, Troyes, Eglise St Nizier</li>
+          <li>XV<sup>ème</sup> siècle</li>
+          <li>Manque de source</li>
+        </ul>
+      </div>
     </div>
   );
 }
