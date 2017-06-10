@@ -76,7 +76,9 @@ class Item extends Component {
       let item = data[params.corpus][params.item];
       item.topic = (item.topic) ? groupBy(item.topic, ['viewpoint']) : [];
       this.setState(item);
+      console.log(item.spatial);
     });
+
   }
 }
 

@@ -14,8 +14,6 @@ class Corpora extends Component {
 
   render() {
     let items = this._getItems();
-    var page = 1;
-    var i = (page-1)*10;
       return(
         <div className="Subject">
           {/* Bases sur lesquelles on récup les info et le nombre d'éléments récupérés
@@ -96,7 +94,7 @@ class Corpora extends Component {
   _getItems() {
     return this.state.items.map(item => 
         <Item key={item.id} name={item.name[0]} thumbnail={item.thumbnail[0]} 
-          id={item.corpus+'/'+item.id} />
+          id={item.corpus+'/'+item.id} spatial={item.spatial} />
     ); 
   }
 
@@ -134,7 +132,7 @@ function Item(props) {
       <div className="Info">
         <ul>
           <li className="Name">{props.name}</li>
-          <li>France, Aube, Troyes, Eglise St Nizier</li>
+          <li>{props.spatial}</li>
           <li>XV<sup>ème</sup> siècle</li>
           <li>Manque de source</li>
         </ul>
