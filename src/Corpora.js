@@ -133,8 +133,6 @@ function Item(props) {
         <ul>
           <li className="Name">{props.name}</li>
           <li>{props.spatial}</li>
-          <li>XV<sup>ème</sup> siècle</li>
-          <li>Manque de source</li>
         </ul>
       </div>
     </div>
