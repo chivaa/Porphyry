@@ -21,7 +21,7 @@ class Portfolio extends Component {
     const corpora = this._getCorpora();
     return (
       <div className="App">
-        <Header/>
+        <Header link="./user_icone.png"/>
         <div ></div>
           <div className="App-content">
             {corpora}
