@@ -16,6 +16,7 @@ class Viewpoint extends Component {
 
   render() {
     let topics = this._getTopics();
+    console.log(topics)
     return (
       <div className="DescriptionModality">
         <h3>{this.state.name}</h3>

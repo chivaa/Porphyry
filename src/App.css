@@ -1,6 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
+  width: 100%
 }
 
 .Nav {
@@ -44,28 +45,54 @@
 }
 
 .App-content {
-  display: flex;
-  min-height: 100vh;  
-  flex-direction: row;
+  width: 100%;
+}
+
+.ListReturn{
+  padding-left: 10%;
+  text-align: left;
 }
 
 .Description {
-  flex-direction: column;
-  flex-grow: 1;
-  margin: 1px;
+  float: right;
+  padding: 1%;
+  text-align: left;
+  width: 48%;
 }
 
 .Subject {
-  flex-direction: column;
-  flex-grow: 2;
-  background-color: ghostwhite;
-  color: rgb(240,240,240);
-  padding: 4px;
-  margin: 2px;
+  color: black;
+  padding: 1%;
+  width: 48%;
 }
 
 .Subject div {
-  background-color: ghostwhite;
+  
+}
+
+.Subject img{
+  height: auto;
+  max-height: 600px;
+  max-width: 48%;   
+  width: auto;
+
+}
+
+.Disclaimer {
+  text-align: left;
+  padding: 0% 17%;
+  width: 66%;
+}
+
+.Disclaimer p {
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
+  padding: 5px 0px;
+}
+
+.Sources {
+  padding: 1px 17%;
+  text-align: left;
 }
 
 .DescriptionModality {
@@ -89,6 +116,12 @@
 
 .Topic {
   text-align: left;
+}
+
+.Accueil {
+  background-color: ghostwhite;
+  color: black;
+  width: 100%;
 }
 
 .Items {
@@ -129,7 +162,7 @@
 }
 
 .Attributes {
-  display: table;
+  text-align: left;
   width: 100%;
 }
 
@@ -140,7 +173,7 @@
 .Key {
   display: table-cell;
   padding: 5px;
-  text-align: right;
+  text-align: left;
   font-weight: normal;
 }
 

@@ -15,61 +15,14 @@ class Corpora extends Component {
   render() {
     let items = this._getItems();
       return(
-        <div className="Subject">
+        <div className="Accueil">
           {/* Bases sur lesquelles on récup les info et le nombre d'éléments récupérés
            <h3>{this.props.ids.join(' + ')} ({this.state.items.length})</h3> 
            */}
           <div className="Items">          
             {
               items
-            }
-            {/*
-              <!--
-          <div className="Items">          
-            {
-              items[i+1]
-            }
-          </div>
-          <div className="Items">          
-            {
-              items[i+2]
-            }
-          </div>
-           <div className="Items">          
-            {
-              items[i+3]
-            }
-          </div><div className="Items">          
-            {
-              items[i+4]
-            }
-          </div>
-          <div className="Items">          
-            {
-              items[i+5]
-            }
-          </div>
-           <div className="Items">          
-            {
-              items[i+6]
-            }
-          </div><div className="Items">          
-            {
-              items[i+7]
-            }
-          </div>
-          <div className="Items">          
-            {
-              items[i+8]
-            }
-          </div>
-          <div className="Items">          
-            {
-              items[i+9]
-            }
-          </div>
-             -->
-             */}          
+            }   
           </div>
 
         </div>

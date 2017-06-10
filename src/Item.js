@@ -20,8 +20,8 @@ class Item extends Component {
     return (
       <div className="App">
       <Header/>
-        <h1>{this.state.name}</h1>
         <div className="App-content">
+          <p className="ListReturn"><a href="/">Retour à la liste</a></p>
           <div className="Description">
             <div className="DescriptionModality">
               <h3>Attributs du document</h3>
@@ -33,6 +33,15 @@ class Item extends Component {
           </div>
           <div className="Subject">
             <img src={this.state.resource} alt="resource" />
+            <h2>{this.state.name}</h2>
+          </div>
+          <div className="Disclaimer">
+            <p> Le site "Corpus vitroeum paticipatif" a pour objectif de permettre à tous les connaisseurs de vitraux d'échanger sur la
+            base de données des vitraux de Troyes. La signification de certains vitraux reste pour l'instant inconnue, d'autres vitraux
+            peuvent manquer d'informations ou de références. Vos interventions sont donc les bienvenues.</p>
+          </div>
+          <div className="Sources">
+            <p>Sources : <a href="#">etude.pdf</a></p>
           </div>
         </div>
       </div>
@@ -76,7 +85,6 @@ class Item extends Component {
       let item = data[params.corpus][params.item];
       item.topic = (item.topic) ? groupBy(item.topic, ['viewpoint']) : [];
       this.setState(item);
-      console.log(item.spatial);
     });
 
   }
@@ -102,6 +110,7 @@ class Viewpoint extends Component {
 
   _getPaths() {
     if (!this.state.topics) return [];
+    //console.log(JSON.stringify(this.state.topics));
     return this.props.topics.map( t =>
       <TopicPath key={t.id} id={t.id} topics={this.state.topics} />
     );
@@ -121,7 +130,9 @@ class Viewpoint extends Component {
       delete topics.user;
       delete topics.name;
       delete topics.upper;
+      // console.log(JSON.stringify(topics));
       this.setState({name, topics});
+      
     });
   }
 }
