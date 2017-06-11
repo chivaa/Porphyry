@@ -73,7 +73,7 @@
 .Subject img{
   height: auto;
   max-height: 600px;
-  max-width: 48%;   
+  max-width: 80%;   
   width: auto;
 
 }
@@ -97,14 +97,12 @@
 
 .DescriptionModality {
   flex-direction: column;
-  background-color: rgb(153, 40,0);
-  color: ivory;
-  padding: 4px;
+  color: black;
+  padding: 2% 1%;
   margin: 1px;
 }
 
 .Topics, .Attributes {
-  background-color: whitesmoke;
   color: black;
 }
 
