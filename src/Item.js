@@ -29,7 +29,9 @@ class Item extends Component {
                 {attributes}
               </div>
             </div>
-            {viewpoints}
+            <div className="Viewpoints">
+              {viewpoints}
+            </div>
           </div>
           <div className="Subject">
             <img src={this.state.resource} alt="resource" />

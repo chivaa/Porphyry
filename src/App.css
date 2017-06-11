@@ -95,11 +95,18 @@
   text-align: left;
 }
 
-.DescriptionModality {
-  flex-direction: column;
+.DescriptionModality { 
   color: black;
-  padding: 2% 1%;
+  flex-direction: column;
   margin: 1px;
+  padding: 0 1%;
+  text-align: center;
+  width: 60%;
+}
+
+.Viewpoints h3 {
+  border-top: solid 2px;
+  padding-top: 2%;
 }
 
 .Topics, .Attributes {
@@ -107,9 +114,9 @@
 }
 
 .Topics {
-  padding: 20px;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 20px;
 }
 
 .Topic {
@@ -160,6 +167,8 @@
 }
 
 .Attributes {
+  // border-bottom: solid 2px; 
+  padding: 10px;
   text-align: left;
   width: 100%;
 }
