@@ -65,7 +65,7 @@ class Corpora extends Component {
             } else {
               item.id = itemId;
               item.corpus = corpus;
-              items.push(item);
+              items.push(item);      
             }
           }
         }
