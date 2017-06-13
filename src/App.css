@@ -7,6 +7,10 @@
 .Nav {
   background-color: #EEE;
   border: solid rgb(60, 50, 50) 4px;
+  -moz-box-shadow: 0px 5px 5px 0px #605050;
+  -webkit-box-shadow: 0px 5px 5px 0px #605050;
+  -o-box-shadow: 0px 5px 5px 0px #605050;
+  box-shadow: 0px 5px 5px 0px #605050;
   color: black;
   background-repeat: no-repeat;
   background-position: right;

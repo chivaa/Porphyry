@@ -17,16 +17,16 @@ class Corpora extends Component {
       return(
         <div className="Accueil">
           {/* Bases sur lesquelles on récup les info et le nombre d'éléments récupérés
-           <h3>{this.props.ids.join(' + ')} ({this.state.items.length})</h3> 
+           <h3>{this.props.ids.join(' + ')} ({this.state.items.length})</h3>
            */}
-          <div className="Items">          
+          <div className="Items">
             {
               items
-            }   
+            }
           </div>
 
         </div>
-      );    
+      );
   }
 
   componentDidMount() {
@@ -45,10 +45,10 @@ class Corpora extends Component {
   }
 
   _getItems() {
-    return this.state.items.map(item => 
-        <Item key={item.id} name={item.name[0]} thumbnail={item.thumbnail[0]} 
+    return this.state.items.map(item =>
+        <Item key={item.id} name={item.name[0]} thumbnail={item.thumbnail[0]}
           id={item.corpus+'/'+item.id} spatial={item.spatial} />
-    ); 
+    );
   }
 
   _fetchItems() {
@@ -78,10 +78,10 @@ class Corpora extends Component {
 function Item(props) {
   let uri = '/item/' + props.id;
   return (
-    <div className="Item">      
+    <div className="Item">
       <Link to={uri}>
         <img src={props.thumbnail} alt={props.name} />
-      </Link>     
+      </Link>
       <div className="Info">
         <ul>
           <li className="Name">{props.name}</li>
