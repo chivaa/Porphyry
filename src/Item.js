@@ -3,6 +3,7 @@ import Hypertopic from 'hypertopic';
 import groupBy from 'json-groupby';
 import conf from './config.json';
 import Header from './Header';
+import CommentBox from './CommentSection';
 
 import './App.css';
 
@@ -44,6 +45,9 @@ class Item extends Component {
           </div>
           <div className="Sources">
             <p>Sources : <a href="#">etude.pdf</a></p>
+          </div>
+          <div>
+            <CommentBox item={this.props.match.params}/>
           </div>
         </div>
       </div>
@@ -134,7 +138,7 @@ class Viewpoint extends Component {
       delete topics.upper;
       // console.log(JSON.stringify(topics));
       this.setState({name, topics});
-      
+
     });
   }
 }
