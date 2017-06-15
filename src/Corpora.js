@@ -34,6 +34,10 @@ class Corpora extends Component {
       () => this._fetchItems(),
       15000
     );
+    var search = document.getElementById('search');
+    search.addEventListener('keydown', (e) => {
+      if (e.keyCode == 13) this._fetchItems();
+    });
   }
 
   componentDidUpdate(prevProps) {
@@ -52,6 +56,8 @@ class Corpora extends Component {
   }
 
   _fetchItems() {
+    var a = document.getElementById('search');
+    var param = a.value.toLowerCase();
     const hypertopic = new Hypertopic(conf.services);
     let uris = this.props.ids.map(id => '/corpus/' + id);
     hypertopic.getView(uris, (data) => {
@@ -63,9 +69,27 @@ class Corpora extends Component {
             if (!item.name || !item.name.length || !item.thumbnail || !item.thumbnail.length) {
               console.log(itemId, "has no name or thumbnail!", item);
             } else {
-              item.id = itemId;
-              item.corpus = corpus;
-              items.push(item);
+              if (param !== ""){
+                if (typeof item.spatial == "undefined"){
+                  if (item.name[0].toLowerCase().indexOf(param) >= 0){
+                    item.id = itemId;
+                    item.corpus = corpus;
+                    items.push(item);
+                  }
+                }
+                else{
+                  if ((item.name[0].toLowerCase().indexOf(param) >= 0) || (item.spatial[0].toLowerCase().indexOf(param) >= 0)) {
+                    item.id = itemId;
+                    item.corpus = corpus;
+                    items.push(item);
+                  }
+                }               
+              }
+              else {
+                item.id = itemId;
+                item.corpus = corpus;
+                items.push(item);
+              }
             }
           }
         }

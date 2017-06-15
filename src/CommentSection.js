@@ -45,7 +45,7 @@ class CommentBox extends React.Component {
     let data = {
       id_corpus : this.state.corpus,
       id_item : this.state.item,
-      id_user : comment.author,
+      user : comment.author,
       text : comment.comment,
     };
 
@@ -127,7 +127,7 @@ class CommentBox extends React.Component {
     render() {
         var commentNodes = this.props.data.map(function (comment) {
           return (
-            <Comment key={comment.id} author={comment.id_user} text={comment.text} date={comment.date}/>
+            <Comment key={comment.id} author={comment.user} text={comment.text} date={comment.date}/>
           );
         });
         return (

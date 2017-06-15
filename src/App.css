@@ -5,6 +5,8 @@
 }
 
 .Nav {
+  background-repeat: no-repeat;
+  background-position: right;
   background-color: #EEE;
   border: solid rgb(60, 50, 50) 4px;
   -moz-box-shadow: 0px 5px 5px 0px #605050;
@@ -12,8 +14,8 @@
   -o-box-shadow: 0px 5px 5px 0px #605050;
   box-shadow: 0px 5px 5px 0px #605050;
   color: black;
-  background-repeat: no-repeat;
-  background-position: right;
+  height: 100%;
+  width: 100%;
 }
 
 .Title {
@@ -40,6 +42,25 @@
   padding: 20px 0px 20px 20%;
   text-align: right;
   width: 15%;
+}
+
+.SearchBar {
+  float:left;
+  padding: 30px 0;
+  width: 30%;
+}
+
+.SearchBar input{
+  border: solid 1px black;
+  border-radius: 10px;
+  box-sizing: border-box; 
+  margin-top: 2%;
+  padding: 2% 2%;
+  width: 60%;
+}
+
+.SearchBar input:focus{
+  outline: none;
 }
 
 .Status {

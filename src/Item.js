@@ -20,7 +20,14 @@ class Item extends Component {
     let viewpoints = this._getViewpoints();
     return (
       <div className="App">
-      <Header link="../../user_icone.png"/>
+        <div className="Nav">
+          <div className="Title">
+            <h1><a href="/" >Accueil</a></h1>
+          </div>
+          <div className="Image">
+            <img src="../../user_icone.png" alt="icone utilisateur"/>
+          </div>
+        </div>
         <div className="App-content">
           <p className="ListReturn"><a href="/">Retour à la liste</a></p>
           <div className="Description">
